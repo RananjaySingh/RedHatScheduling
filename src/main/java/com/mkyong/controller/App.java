@@ -53,8 +53,8 @@ public class App {
             
         }*/
 	try {
-		File file = new File( System.getenv("FILE_PATH") + "\\opt\\system.properties");
-	/*	File file = new File( "/opt/system.properties");*/
+		//File file = new File( System.getenv("FILE_PATH") + "\\opt\\system.properties");
+		File file = new File( "/opt/system.properties");
 		FileInputStream fileInput = new FileInputStream(file);
 		
 		properties.load(fileInput);
