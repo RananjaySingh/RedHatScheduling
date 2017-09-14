@@ -54,7 +54,7 @@ public class BaseController {
 		// Spring uses InternalResourceViewResolver and return back index.jsp
 		String test=app.test();
 		System.out.println("Test controller");
-		/*logger.info("HI OPENSHIFT");*/
+		logger.info("HI OPENSHIFT");
 		return new ResponseEntity(test, HttpStatus.OK);
 
 	}
