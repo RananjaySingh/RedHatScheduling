@@ -17,9 +17,10 @@ public class App {
 	@Autowired
 	private Environment env;
 	
-	public void test(){
+	public String test(){
 
 	Properties prop = new Properties();
+	Properties properties = new Properties();
 	/*InputStream input = null;
 
 	try {
@@ -52,20 +53,23 @@ public class App {
             
         }*/
 	try {
-		/*File file = new File( System.getenv("FILE_PATH") + "\\opt\\system.properties");*/
-		File file = new File( "/opt/system.properties");
+		File file = new File( System.getenv("FILE_PATH") + "\\opt\\system.properties");
+	/*	File file = new File( "/opt/system.properties");*/
 		FileInputStream fileInput = new FileInputStream(file);
-		Properties properties = new Properties();
+		
 		properties.load(fileInput);
 		fileInput.close();
 		System.out.println("jdbc.username:"+properties.getProperty("jdbc.username"));
 		System.out.println("password:"+properties.getProperty("jdbc.password"));
 		System.out.println("url:"+properties.getProperty("jdbc.url"));
+		
 		}
 	
         catch (Exception e) {
             e.printStackTrace();
+            
         }
+	return properties.getProperty("jdbc.url");
 	}
   
 }
