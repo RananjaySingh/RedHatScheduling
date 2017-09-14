@@ -29,6 +29,7 @@ public class BaseController {
 		logger.debug("[welcome] counter : {}", counter);*/
 
 		// Spring uses InternalResourceViewResolver and return back index.jsp
+		logger.info("HI OPENSHIFT BEFORE");
 		app.test();
 		logger.info("HI OPENSHIFT");
 		return VIEW_INDEX;
