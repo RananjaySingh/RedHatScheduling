@@ -20,13 +20,13 @@ public class BaseController {
 	private static int counter = 0;
 	private static final String VIEW_INDEX = "index";
 	private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
-
+/*
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
 
-	/*	model.addAttribute("message", "Welcome");
+		model.addAttribute("message", "Welcome");
 		model.addAttribute("counter", ++counter);
-		logger.debug("[welcome] counter : {}", counter);*/
+		logger.debug("[welcome] counter : {}", counter);
 
 		// Spring uses InternalResourceViewResolver and return back index.jsp
 		logger.info("HI OPENSHIFT BEFORE");
@@ -34,7 +34,7 @@ public class BaseController {
 		logger.info("HI OPENSHIFT");
 		return VIEW_INDEX;
 
-	}
+	}*/
 
 	/*@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String name, ModelMap model) {
@@ -45,7 +45,7 @@ public class BaseController {
 		return VIEW_INDEX;```````````````````
 
 	}*/
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity test() {
 
 	/*	model.addAttribute("message", "Welcome");
@@ -53,9 +53,14 @@ public class BaseController {
 		logger.debug("[welcome] counter : {}", counter);*/
 
 		// Spring uses InternalResourceViewResolver and return back index.jsp
-		String test=app.test();
 		System.out.println("Test controller");
-		logger.info("HI OPENSHIFT");
+		logger.info("Test Controller");
+		String test=app.test();
+		System.out.println("Test controller2");
+		logger.info("Test Controller2");
+		logger.info(test);
+		
+		/*logger.info("HI OPENSHIFT");*/
 		return new ResponseEntity(test, HttpStatus.OK);
 
 	}
