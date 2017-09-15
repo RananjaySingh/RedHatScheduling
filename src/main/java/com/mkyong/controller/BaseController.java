@@ -20,7 +20,7 @@ public class BaseController {
 	private static int counter = 0;
 	private static final String VIEW_INDEX = "index";
 	private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
-/*
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
 
@@ -34,7 +34,7 @@ public class BaseController {
 		logger.info("HI OPENSHIFT");
 		return VIEW_INDEX;
 
-	}*/
+	}
 
 	/*@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String name, ModelMap model) {
@@ -45,7 +45,7 @@ public class BaseController {
 		return VIEW_INDEX;```````````````````
 
 	}*/
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public ResponseEntity test() {
 
 	/*	model.addAttribute("message", "Welcome");
