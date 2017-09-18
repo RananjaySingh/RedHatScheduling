@@ -1,0 +1,3 @@
+[template]
+src = "system.properties.tmpl"
+dest = "/wildfly/standalone/configuration/system.properties"
